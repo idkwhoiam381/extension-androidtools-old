@@ -23,7 +23,7 @@ class Build {
 	 */
 	public static var SDK_INT:Int = JNI.createStaticField("android/os/Build$VERSION", "SDK_INT", "I").get();
 	
-	public static final ODM_SKU:String = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) ? JNICache.createStaticField('android/os/Build', 'ODM_SKU',
+	public static var ODM_SKU:String = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) ? JNICache.createStaticField('android/os/Build', 'ODM_SKU',
 		'Ljava/lang/String;')
 		.get() : UNKNOWN;
 
